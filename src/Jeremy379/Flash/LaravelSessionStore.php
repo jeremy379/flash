@@ -1,4 +1,6 @@
-<?php namespace Jeremy379\Flash;
+<?php
+
+namespace Jeremy379\Flash;
 
 use Illuminate\Session\Store;
 

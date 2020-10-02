@@ -1,4 +1,6 @@
-<?php namespace Jeremy379\Flash;
+<?php
+
+namespace Jeremy379\Flash;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,7 +13,7 @@ class Flash extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'flash';
+        return 'Flash';
     }
 
 } 
