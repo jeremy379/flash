@@ -1,4 +1,4 @@
-* Forked at first from Laracasts/Flash to use multiple message
+* Forked at first from Laracasts/Flash to use multiple message and then forked from mdupaul/flash
 
 # Easy Flash Messages
 
@@ -6,13 +6,13 @@
 
 First, pull in the package through Composer.
 
-Run `composer require mdupaul/flash`
+Run `composer require jeremy379/flash`
 
 And then, if using Laravel 5, include the service provider within `config/app.php`.
 
 ```php
 'providers' => [
-    'Mdupaul\Flash\FlashServiceProvider'
+    'Jeremy379\Flash\FlashServiceProvider'
 ];
 ```
 
@@ -20,7 +20,7 @@ And, for convenience, add a facade alias to this same file at the bottom:
 
 ```php
 'aliases' => [
-    'Flash' => 'Mdupaul\Flash\Flash'
+    'Flash' => 'Jeremy379\Flash\Flash'
 ];
 ```
 
