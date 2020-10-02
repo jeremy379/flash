@@ -20,7 +20,7 @@
             "Jeremy379\\Flash": "src/"
         },
         "files": [
-            "src/jeremy379/Flash/functions.php"
+            "src/Jeremy379/Flash/functions.php"
         ]
     },
     "minimum-stability": "stable"
