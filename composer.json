@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeremy379\\Flash": "src/"
+            "Jeremy379\\Flash\\": "src/"
         },
         "files": [
             "src/functions.php"
