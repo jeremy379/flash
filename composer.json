@@ -16,12 +16,19 @@
         "mockery/mockery": "dev-master"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Jeremy379\\Flash": "src/"
         },
         "files": [
             "src/functions.php"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jeremy379\\FlashServiceProvider.php"
+            ]
+        }
     },
     "minimum-stability": "stable"
 }
