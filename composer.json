@@ -26,7 +26,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeremy379\\FlashServiceProvider.php"
+                "Jeremy379\\Flash\\FlashServiceProvider.php"
             ]
         }
     },
