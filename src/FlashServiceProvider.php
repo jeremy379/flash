@@ -3,6 +3,9 @@
 namespace Jeremy379\Flash;
 
 use Illuminate\Support\ServiceProvider;
+use Jeremy379\Flash\SessionStore;
+use Jeremy379\Flash\LaravelSessionStore;
+use Jeremy379\Flash\FlashNotifier;
 
 class FlashServiceProvider extends ServiceProvider
 {
@@ -22,12 +25,12 @@ class FlashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'Jeremy379\Flash\SessionStore',
-            'Jeremy379\Flash\LaravelSessionStore'
+            SessionStore::class,
+	        LaravelSessionStore::class
         );
 
         $this->app->singleton('flash', function () {
-            return $this->app->make('Jeremy379\Flash\FlashNotifier');
+            return $this->app->make(FlashNotifier::class);
         });
     }
 
@@ -38,10 +41,10 @@ class FlashServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'flash');
+        $this->loadViewsFrom(__DIR__ . '/views', 'flash');
 
         $this->publishes([
-            __DIR__ . '/../../views' => base_path('resources/views/vendor/flash')
+            __DIR__ . '/views' => base_path('resources/views/vendor/flash')
         ]);
     }
 
